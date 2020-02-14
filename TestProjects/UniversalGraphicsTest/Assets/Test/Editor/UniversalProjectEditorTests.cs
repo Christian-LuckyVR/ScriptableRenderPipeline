@@ -1,8 +1,6 @@
 using NUnit.Framework;
-using System.Collections;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
-using UnityEngine.TestTools;
 
 public class UniversalProjectEditorTests
 {
@@ -14,12 +12,10 @@ public class UniversalProjectEditorTests
         GetUniversalAsset();
     }
 
-    [UnityTest]
-    public IEnumerator GetDefaultRenderer()
+    //[Test]
+    public void GetDefaultRenderer()
     {
         GetUniversalAsset();
-
-        yield return null;
 
         Assert.IsNotNull(currentAsset.scriptableRenderer, "Current ScriptableRenderer is null.");
     }
